@@ -8,13 +8,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Spring eCommerce</title>
+  <title>Galaxy Games</title>
 
 
 
     <!-- Bootstrap core CSS -->
     <link
-      th:href="@{vendor/bootstrap/css/bootstrap.min.css}"
+      th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
       rel="stylesheet"
     />
 
@@ -26,7 +26,7 @@
 <body>
 
    <!-- Navigation -->
-   <div th:include="admin/template_admin.html :: header"></div>
+<div th:include="admin/template_admin.html :: header"></div>
 
 <!-- Page Content -->
 <div class="container">
@@ -34,7 +34,7 @@
 
   <!-- Page Heading/Breadcrumbs -->
   <h1 class="mt-4 mb-3">
-    Spring eCommerce <small>Productos</small>
+    Galaxy Games <small>Productos</small>
   </h1>
 
   <ol class="breadcrumb">
@@ -42,7 +42,7 @@
     <li class="breadcrumb-item active">Ver Productos</li>
   </ol>
 
-  <a class="btn btn-primary" href="#" > Crear Producto</a>
+  <a class="btn btn-primary" th:href="@{/product/create}" > Crear Producto</a>
   <h2>Productos</h2>
   <table class="table">
     <thead>
@@ -73,8 +73,8 @@
  <div th:include="admin/template_admin.html :: footer"></div>
 
 <!-- Bootstrap core JavaScript -->
-<script th:src="@{vendor/jquery/jquery.min.js}"></script>
-<script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
 </body>
 
