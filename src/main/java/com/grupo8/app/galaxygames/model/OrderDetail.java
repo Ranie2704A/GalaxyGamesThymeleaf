@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -22,7 +23,7 @@ public class OrderDetail {
     @OneToOne
     private Order order;
 
-    @OneToOne
+    @ManyToOne
     private Product product;
 
     public OrderDetail() {
@@ -98,7 +99,4 @@ public class OrderDetail {
                 + total + "]";
     }
 
-
-
-    
 }
