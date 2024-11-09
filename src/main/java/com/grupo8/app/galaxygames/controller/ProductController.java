@@ -12,6 +12,7 @@ import com.grupo8.app.galaxygames.model.Product;
 import com.grupo8.app.galaxygames.model.User;
 import com.grupo8.app.galaxygames.service.ProductService;
 
+
 @Controller
 @RequestMapping("/product")
 public class ProductController {
@@ -22,7 +23,8 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("")
-    public String show(){
+    public String show(org.springframework.ui.Model model){
+        model.addAttribute("products", productService.findAll());
         return "products/show";
     }
 
