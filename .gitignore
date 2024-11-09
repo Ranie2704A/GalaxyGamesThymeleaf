@@ -34,3 +34,6 @@ build/
 
 ### Persistence ###
 application.properties
+
+### Images ###
+images/
